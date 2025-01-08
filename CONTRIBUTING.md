@@ -1,68 +1,73 @@
-# Contributing to our project
+# Contributing
 
-This outlines how to propose a change to this project. 
+Contributions are welcome, and they are greatly appreciated! Every little bit
+helps, and credit will always be given.
 
-### Fixing typos
+## Types of Contributions
 
-Small typos or grammatical errors in documentation may be edited directly using
-the GitHub web interface, so long as the changes are made in the _source_ file.
+### Report Bugs
 
-*  `YES`: you edit `.py`, `.ipynb`, `.md` files.
-*  `NO`: you edit an `.html` file, or any other files not listed in `YES`.
+If you are reporting a bug, please include:
 
-### Prerequisites
+* Your operating system name and version.
+* Any details about your local setup that might be helpful in troubleshooting.
+* Detailed steps to reproduce the bug.
 
-Before you make a substantial pull request, you should always file an issue and
-make sure someone from the team agrees that it's a problem. If you've found a
-bug, create an associated issue and illustrate the bug with a minimal reproducible example (MRE).
+### Fix Bugs
 
-A reproducible example should include the following:
+Look through the GitHub issues for bugs. Anything tagged with "bug" and "help
+wanted" is open to whoever wants to implement it.
 
-- Clear Description: Explain what the issue or feature is.
-- Minimal Code: Provide a minimal piece of code that demonstrates the problem or change.
-- Expected Output: Specify what you expect the output to be.
-- Actual Output: Describe what actually happens when you run the code.
+### Implement Features
 
-Here's an example of a MRE
+Look through the GitHub issues for features. Anything tagged with "enhancement"
+and "help wanted" is open to whoever wants to implement it.
 
-```python
-# Example of a minimal code to demonstrate the issue/feature
-import pandas as pd
+### Write Documentation
 
-# Create a simple DataFrame
-data = {'Name': ['Alice', 'Bob', 'Charlie'],
-        'Math': [90, 85, 92],
-        'Science': [88, 79, 94]}
+You can never have enough documentation! Please feel free to contribute to any
+part of the documentation, such as the official docs, docstrings, or even
+on the web in blog posts, articles, and such.
 
-df = pd.DataFrame(data)
+### Submit Feedback
 
-# Example operation that causes the issue
-df['Average'] = df[['Math', 'Science']].mean(axis=1)
+If you are proposing a feature:
 
-# Expected output: DataFrame with 'Average' column calculated
-print(df)
-```
+* Explain in detail how it would work.
+* Keep the scope as narrow as possible, to make it easier to implement.
+* Remember that this is a volunteer-driven project, and that contributions
+  are welcome :)
 
-What to include:
+## Get Started!
 
-- Issue Example: If the code has a bug, describe the issue. For example, "The calculation for 'Average' is incorrect due to missing values."
-- Expected Behavior: For example, "The 'Average' column should be computed correctly even with missing data."
+Ready to contribute? Here's how to set up `fast_eda` for local development.
 
-### Pull request process
+1. Download a copy of `fast_eda` locally.
+2. Install `fast_eda` using `poetry`:
 
-* Please create a Git branch for each pull request (PR).
-* Provide a descriptive title for your PR and include any relevant information in the PR description:
-  - What is the purpose of the change?
-  - What issue does it address (if applicable)?
-  - Any additional notes for the reviewers (e.g., tests added, documentation updated)
-* New code should follow the [NumpyDoc style guide](https://numpydoc.readthedocs.io/en/latest/format.html#conclusion) or PEP8 [style guide](https://www.python.org/dev/peps/pep-0008/).
+    ```console
+    $ poetry install
+    ```
 
-### Code of Conduct
+3. Use `git` (or similar) to create a branch for local development and make your changes:
 
-Please note that this project is released with a [Contributor Code of
-Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to
-abide by its terms.
+    ```console
+    $ git checkout -b name-of-your-bugfix-or-feature
+    ```
 
-### Attribution
+4. When you're done making changes, check that your changes conform to any code formatting requirements and pass any tests.
 
-These contributing guidelines were adapted from the [Breast Cancer Predictor Project contributing guidelines](https://github.com/ttimbers/breast_cancer_predictor_py/blob/main/CONTRIBUTING.md).
+5. Commit your changes and open a pull request.
+
+## Pull Request Guidelines
+
+Before you submit a pull request, check that it meets these guidelines:
+
+1. The pull request should include additional tests if appropriate.
+2. If the pull request adds functionality, the docs should be updated.
+3. The pull request should work for all currently supported operating systems and versions of Python.
+
+## Code of Conduct
+
+Please note that the `fast_eda` project is released with a
+Code of Conduct. By contributing to this project you agree to abide by its terms.
