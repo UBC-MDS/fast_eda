@@ -2,7 +2,7 @@
 
 Shawn Xiao Hu, Eugene You, Gilbert Akuja, Tien Nguyen
 
-## fast_eda
+## Fast_eda
 
 A package that takes any data set and performs fast EDA analysis.
 
