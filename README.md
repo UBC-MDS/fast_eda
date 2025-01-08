@@ -1,3 +1,5 @@
+# Shawn Xiao Hu, Eugene You, Gilbert Akuja, Tien Nguyen
+
 # fast_eda
 
 A packckage for performing fast EDA operations on any pandas data frames.
