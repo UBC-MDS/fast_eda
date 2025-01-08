@@ -18,6 +18,8 @@ Counts the number of missing values in each column of the DataFrame, providing a
 - `correlation_matrix()`:
 Generates a correlation matrix to show the relationships between numeric features in the DataFrame. This function helps identify potential linear dependencies between variables, which can inform further analysis or feature selection.
 
+The `fast_eda` package fits into the broader Python ecosystem as a lightweight tool designed to simplify the initial stages of exploratory data analysis (EDA). While there are other Python packages that offer similar functionality, such as [ydata-profiling](https://github.com/ydataai/ydata-profiling), `fast_eda` differentiates itself by focusing on providing quick and efficient summary statistics, visualizations, and missing data counts in a minimalistic and easy-to-use format. FastEDA aims for speed and simplicity, making it ideal for users who need a quick, lightweight solution without overwhelming complexity.
+
 ## Installation
 
 ```bash
