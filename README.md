@@ -9,6 +9,7 @@
 
 ## Description 
 
+A package that takes any data set and performs one of the fastest EDA analysis.
 
 ## 
 
