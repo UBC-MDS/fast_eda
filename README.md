@@ -1,4 +1,6 @@
-## Shawn Xiao Hu, Eugene You, Gilbert Akuja, Tien Nguyen
+## Contributors 
+
+Shawn Xiao Hu, Eugene You, Gilbert Akuja, Tien Nguyen
 
 ## fast_eda
 
