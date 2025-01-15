@@ -18,7 +18,21 @@ def describe_function(df):
         A DataFrame containing the calculated summary statistics for 
         each numeric column.
     """
-    pass
+    summary = df.describe()
+    
+    # Add median (50%) to the summary
+    median = df.median()
+    
+    # Add the mean and standard deviation
+    mean = df.mean()
+    std = df.std()
+
+    # Create a new DataFrame with the desired statistics
+    summary.loc['mean'] = mean
+    summary.loc['50%'] = median
+    summary.loc['std'] = std
+
+    return summary
 
 def distribution_plotting_function(df):
     """
