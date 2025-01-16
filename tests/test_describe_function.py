@@ -1,17 +1,12 @@
 import pytest
 import pandas as pd
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
-# Sample describe function (This should be implemented)
-def describe_function(df):
-    """
-    Generate summary statistics for numeric columns in the DataFrame.
+# Now import fast_eda
+from fast_eda.fast_eda import describe_function
 
-    This function computes basic statistics such as mean, median (50%), 
-    standard deviation (std), minimum, and maximum for each numeric column 
-    in the DataFrame, providing an overview of the central tendency 
-    and spread of the data.
-    """
-    return df.describe()
 
 # Test if the median is a float
 def test_median_is_float():
