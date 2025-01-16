@@ -24,7 +24,21 @@ def describe_function(df):
         A DataFrame containing the calculated summary statistics for 
         each numeric column.
     """
-    pass
+    summary = df.describe()
+    
+    # Add median (50%) to the summary
+    median = df.median()
+    
+    # Add the mean and standard deviation
+    mean = df.mean()
+    std = df.std()
+
+    # Create a new DataFrame with the desired statistics
+    summary.loc['mean'] = mean
+    summary.loc['50%'] = median
+    summary.loc['std'] = std
+
+    return summary
 
 def distribution_plots(df, c, r,  figsize = (10,  6), col_ovr=None):
     """
@@ -135,23 +149,43 @@ def counts_function(df):
     """
     pass
 
-def correlation_matrix(df):
+def correlation_matrix_viz(df):
     """
-    Generate a correlation matrix for numeric columns in the DataFrame.
+    Generate a correlation matrix visualization for numeric columns in a DataFrame.
 
-    This function computes the Pearson correlation coefficients between 
-    all numeric columns in the DataFrame, showing how strongly each 
-    feature is related to the others.
+    This function computes the Spearman correlation coefficients between all numeric 
+    columns in the provided DataFrame. The resulting correlation matrix is transformed 
+    into a long-form DataFrame suitable for visualization, and an interactive Altair 
+    scatter plot is created to display the correlations.
+
+    The visualization includes:
+    - **X-axis and Y-axis**: The pair of features being compared.
+    - **Circle size**: The magnitude of the absolute correlation value, indicating the strength of the relationship.
+    - **Color**: The direction and strength of the correlation (positive or negative), represented using a diverging color scale.
 
     Parameters
     ----------
     df : pandas.DataFrame
-        The input DataFrame containing numeric columns.
+        The input DataFrame containing numeric columns for correlation analysis.
 
     Returns
     -------
-    pandas.DataFrame
-        A DataFrame representing the correlation matrix between numeric 
-        columns in the input DataFrame.
+    alt.Chart
+        An interactive Altair chart visualizing the correlation matrix.
+
+    Notes
+    -----
+    - Self-correlations (diagonal values) are set to 0 to avoid cluttering the plot.
+    - Non-numeric columns are ignored in the computation.
     """
-    pass
+    import altair as alt
+    corr_df = df.select_dtypes('number').corr('spearman', numeric_only=True).stack().reset_index(name='corr')
+    corr_df.loc[corr_df['corr'] == 1, 'corr'] = 0  # Remove diagonal
+    corr_df['abs'] = corr_df['corr'].abs()
+    chart = alt.Chart(corr_df).mark_circle().encode(
+        x='level_0',
+        y='level_1',
+        size=alt.Size('abs').scale(domain=(0, 1)),
+        color=alt.Color('corr').scale(scheme='blueorange', domain=(-1, 1))
+    )
+    return chart
