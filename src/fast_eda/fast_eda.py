@@ -129,13 +129,13 @@ def distribution_plots(df, c, r,  figsize = (10,  6), col_ovr=None):
     fig.tight_layout()
     return fig, axes
 
-def counts_function(df):
+def count_nulls(df):
     """
     Count missing values in each column of the DataFrame.
 
-    This function returns the number of missing (NaN) values for each column 
-    in the DataFrame, helping to identify which columns require data cleaning 
-    or imputation.
+    This function calculates the number of missing (NaN) values in each column 
+    of the DataFrame, assisting in identifying columns that need cleaning or 
+    imputation.
 
     Parameters
     ----------
@@ -145,9 +145,19 @@ def counts_function(df):
     Returns
     -------
     pandas.Series
-        A Series with the number of missing values for each column.
+        A Series with column names as the index and the count of missing values 
+        in each column as the values.
+
+    Raises
+    ------
+    ValueError
+        If the input is not a pandas DataFrame.
     """
-    pass
+    if not isinstance(df, pd.DataFrame):
+        raise ValueError("Input must be a pandas DataFrame")
+    missing_counts = df.isnull().sum().astype('int64')
+    
+    return missing_counts
 
 def correlation_matrix_viz(df):
     """
