@@ -12,7 +12,7 @@ Summarizes numeric columns in a DataFrame by calculating basic statistics such a
 - `distribution_plotting()`:
 Visualizes the distribution of both categorical and numeric columns by generating bar charts for categorical data and histograms for numeric data. This function helps in understanding the frequency distribution and patterns in the dataset.
 
-- `counts()`:
+- `counts_nulls()`:
 Counts the number of missing values in each column of the DataFrame, providing a clear overview of data completeness. This function is useful for identifying columns that may require cleaning or imputation.
 
 - `correlation_matrix()`:
