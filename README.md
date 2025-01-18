@@ -4,12 +4,12 @@ Shawn Xiao Hu, Eugene You, Gilbert Akuja, Tien Nguyen
 
 ## fast_eda
 
-The `fast_eda` package simplifies data exploration by providing key functions for quick insights. The `describe_function()` summarizes numeric columns with statistics like mean and median. The `distribution_plotting_function()` visualizes both categorical and numeric columns using bar charts or histograms. The `counts_function()` identifies missing values in each column. The `correlation_matrix()` generates a correlation matrix between the features in the data frame. FastEDA helps users efficiently explore datasets and identify key patterns with minimal effort. 
+The `fast_eda` package simplifies data exploration by providing key functions for quick insights. The `describe_function()` summarizes numeric columns with statistics like mean and median. The `distribution_plots()` visualizes both categorical and numeric columns using bar charts or histograms. The `counts_function()` identifies missing values in each column. The `correlation_matrix()` generates a correlation matrix between the features in the data frame. FastEDA helps users efficiently explore datasets and identify key patterns with minimal effort. 
 
-- `describe()`:
+- `describe_function()`:
 Summarizes numeric columns in a DataFrame by calculating basic statistics such as mean, median, standard deviation, and range. It provides a quick overview of central tendencies and data spread.
 
-- `distribution_plotting()`:
+- `distribution_plots()`:
 Visualizes the distribution of both categorical and numeric columns by generating bar charts for categorical data and histograms for numeric data. This function helps in understanding the frequency distribution and patterns in the dataset.
 
 - `counts()`:
