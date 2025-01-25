@@ -30,7 +30,20 @@ $ pip install fast_eda
 
 ## Usage
 
-- TODO
+``` bash
+The fast_eda package simplifies data exploration by providing key functions used to get quick insights such as
+distribution plots,null value counts, correlation matrix, descriptive statistics such as mean,median and standard deviations. 
+
+import fast_eda.fast_eda as eda 
+import seaborn as sns 
+import pandas as pd 
+
+
+dist_plots = eda.distribution_plots(iris, 2, 3)
+nulls_values = eda.count_nulls(iris)
+correlation_matrix_plot = eda.correlation_matrix_viz(iris)
+descriptions = eda.describe_function(iris)
+```
 
 ## Contributing
 
