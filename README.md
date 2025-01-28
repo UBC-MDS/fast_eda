@@ -27,22 +27,49 @@ The `fast_eda` package fits into the broader Python ecosystem as a lightweight t
 ```bash
 $ pip install fast_eda
 ```
+## Documentation 
 
+Our online documentation can be found [here](https://fast-eda.readthedocs.io/en/latest/?badge=latest)
 ## Usage
 
-``` bash
 The fast_eda package simplifies data exploration by providing key functions used to get quick insights such as
 distribution plots,null value counts, correlation matrix, descriptive statistics such as mean,median and standard deviations. 
 
+Once you install fast_eda using pip, you can access the following functions as shown below in the examples.
+
+``` bash
 import fast_eda.fast_eda as eda 
 import seaborn as sns 
 import pandas as pd 
 
 
-dist_plots = eda.distribution_plots(iris, 2, 3)
-nulls_values = eda.count_nulls(iris)
-correlation_matrix_plot = eda.correlation_matrix_viz(iris)
-descriptions = eda.describe_function(iris)
+dist_plots = eda.distribution_plots(iris, 2, 3) # This will show distribution plots of the given dataset 
+
+nulls_values = eda.count_nulls(iris) # This will show a summary of the number of null values in each rows 
+
+correlation_matrix_plot = eda.correlation_matrix_viz(iris) # This will generate the correlation matrix for numeric columns
+
+descriptions = eda.describe_function(iris) # This will generate summary statistics such as mean, medain and standard deviations 
+
+```
+
+## Running Tests
+To make sure the fast_eda package is working properly on your system, you can run the testing scripts with pytest. This will require you to have pytest installed on your system.
+
+```bash
+$ pip install pytest
+```
+
+You will then need to clone the repository on to your machine and navigate to the root directory. Once that is done you can execute the following command to run our testing scripts:
+
+```bash
+$ pytest
+```
+
+To get a view of the test coverage, you can run the following command:
+
+```bash
+$ pytest --cov=src/fast_eda
 ```
 
 ## Contributing
