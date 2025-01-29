@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fast_eda"
-version = "0.1.0"
+version = "0.0.0"
 description = "A packckage for performing fast EDA operations on any pandas data frames."
 authors = ["Tien Nguyen, Eugene You, Gilbert Akuja, Shawn Xiao Hu"]
 license = "MIT"
