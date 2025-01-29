@@ -1,6 +1,6 @@
 ## Contributors 
 
-Shawn Xiao Hu, Eugene You, Gilbert Akuja,  Tien Nguyen
+Shawn Xiao Hu, Eugene You, Gilbert Akuja, Tien Nguyen
 
 ## fast_eda
 
