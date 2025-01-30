@@ -27,7 +27,7 @@ The `fast_eda` package fits into the broader Python ecosystem as a lightweight t
 ## Installation
 
 ```bash
-$ pip install fast_eda
+$ pip install very_fast_eda
 ```
 ## Documentation 
 
