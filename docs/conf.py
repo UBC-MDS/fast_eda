@@ -6,7 +6,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u"fast_eda"
+project = u"very_fast_eda"
 copyright = u"2025, Tien Nguyen, Eugene You, Gilbert Akuja, Shawn Xiao Hu"
 author = u"Tien Nguyen, Eugene You, Gilbert Akuja, Shawn Xiao Hu"
 
