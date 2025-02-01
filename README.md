@@ -45,7 +45,7 @@ Our online documentation can be found [here](https://fast-eda.readthedocs.io/en/
 The `very_fast_eda` package simplifies data exploration by providing key functions used to get quick insights such as
 distribution plots,null value counts, correlation matrix, descriptive statistics such as mean,median and standard deviations. 
 
-Once you install fast_eda using pip, you can access the following functions as shown below in the examples.
+Once you install `very_fast_eda` using pip, you can access the following functions as shown below in the examples.
 
 ``` bash
 import seaborn as sns 
