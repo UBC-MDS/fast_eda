@@ -23,6 +23,12 @@ def describe_function(df):
     pandas.DataFrame
         A DataFrame containing the calculated summary statistics for 
         each numeric column.
+    
+    Examples
+    --------
+    >>> import pandas as pd
+    >>> df = pd.DataFrame({'A': [1, 2, 3, 4, 5], 'B': [10, 20, 30, 40, 50]})
+    >>> describe_function(df)
     """
     summary = df.describe()
     
@@ -152,6 +158,12 @@ def count_nulls(df):
     ------
     ValueError
         If the input is not a pandas DataFrame.
+    
+    Examples
+    --------
+    >>> import pandas as pd
+    >>> df = pd.DataFrame({'A': [1, None, 3], 'B': [None, 2, 3]})
+    >>> count_nulls(df)
     """
     if not isinstance(df, pd.DataFrame):
         raise ValueError("Input must be a pandas DataFrame")
@@ -187,6 +199,12 @@ def correlation_matrix_viz(df):
     -----
     - Self-correlations (diagonal values) are set to 0 to avoid cluttering the plot.
     - Non-numeric columns are ignored in the computation.
+    
+    Examples
+    --------
+    >>> import pandas as pd
+    >>> df = pd.DataFrame({'A': [1, 2, 3], 'B': [2, 4, 6], 'C': [5, 3, 1]})
+    >>> correlation_matrix_viz(df)
     """
     import altair as alt
     corr_df = df.select_dtypes('number').corr('spearman', numeric_only=True).stack().reset_index(name='corr')
