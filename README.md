@@ -2,15 +2,16 @@
 
 Shawn Xiao Hu, Eugene You, Gilbert Akuja, Tien Nguyen
 
-## fast_eda
+## very_fast_eda
 
 [![Documentation Status](https://readthedocs.org/projects/fast-eda/badge/?version=latest)](https://fast-eda.readthedocs.io/en/latest/?badge=latest)
 [![codecov](https://codecov.io/gh/UBC-MDS/fast_eda/graph/badge.svg?token=qRRzvujw3T)](https://codecov.io/gh/UBC-MDS/fast_eda)
 [![ci-cd](https://github.com/UBC-MDS/fast_eda/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/UBC-MDS/fast_eda/actions/workflows/ci-cd.yml)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)]()
+![PyPI - Version](https://img.shields.io/pypi/v/very_fast_eda)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/very_fast_eda)
 
-The `fast_eda` package simplifies data exploration by providing key functions for quick insights. The `describe_function()` summarizes numeric columns with statistics like mean and median. The `distribution_plots()` visualizes both categorical and numeric columns using bar charts or histograms. The `counts_function()` identifies missing values in each column. The `correlation_matrix()` generates a correlation matrix between the features in the data frame. FastEDA helps users efficiently explore datasets and identify key patterns with minimal effort. 
+The `fast_eda` package simplifies data exploration by providing key functions for quick insights. The `describe_function()` summarizes numeric columns with statistics like mean and median. The `distribution_plots()` visualizes both categorical and numeric columns using bar charts or histograms. The `counts_nulls()` identifies missing values in each column. The `correlation_matrix()` generates a correlation matrix between the features in the data frame. FastEDA helps users efficiently explore datasets and identify key patterns with minimal effort. 
 
 - `describe_function()`:
 Summarizes numeric columns in a DataFrame by calculating basic statistics such as mean, median, standard deviation, and range. It provides a quick overview of central tendencies and data spread.
