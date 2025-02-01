@@ -24,7 +24,11 @@ Counts the number of missing values in each column of the DataFrame, providing a
 - `correlation_matrix_viz()`:
 Generate a correlation matrix visualization for numeric columns in a DataFrame.
 
-The `fast_eda` package fits into the broader Python ecosystem as a lightweight tool designed to simplify the initial stages of exploratory data analysis (EDA). While there are other Python packages that offer similar functionality, such as [ydata-profiling](https://github.com/ydataai/ydata-profiling), `fast_eda` differentiates itself by focusing on providing quick and efficient summary statistics, visualizations, and missing data counts in a minimalistic and easy-to-use format. FastEDA aims for speed and simplicity, making it ideal for users who need a quick, lightweight solution without overwhelming complexity.
+## Python Ecosystem Fit 
+
+The `fast_eda` package fits into the broader Python ecosystem as a lightweight tool designed to simplify the initial stages of exploratory data analysis (EDA). While there are other Python packages that offer similar functionality, such as [ydata-profiling](https://github.com/ydataai/ydata-profiling), `fast_eda` differentiates itself by focusing on providing quick and efficient summary statistics, visualizations, and missing data counts in a minimalistic and easy-to-use format. `fast_eda` aims for speed and simplicity, making it ideal for users who need a quick, lightweight solution without overwhelming complexity.
+
+Unlike  [ydata-profiling](https://github.com/ydataai/ydata-profiling) and `sweetviz`, which generate detailed, interactive HTML reports, fast_eda is designed for rapid, inline insights within a Jupyter Notebook or Python script, making it more suitable for quick exploratory work rather than full-fledged automated reporting. Additionally, fast_eda emphasizes computational efficiency, avoiding the performance overhead associated with generating large, complex reports.
 
 ## Installation
 
@@ -34,6 +38,7 @@ $ pip install very_fast_eda
 ## Documentation 
 
 Our online documentation can be found [here](https://fast-eda.readthedocs.io/en/latest/?badge=latest)
+
 ## Usage
 
 The fast_eda package simplifies data exploration by providing key functions used to get quick insights such as
@@ -58,6 +63,7 @@ descriptions = eda.describe_function(iris) # This will generate summary statisti
 ```
 
 ## Running Tests
+
 To make sure the fast_eda package is working properly on your system, you can run the testing scripts with pytest. This will require you to have pytest installed on your system.
 
 ```bash
