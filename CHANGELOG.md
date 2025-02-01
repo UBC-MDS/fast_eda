@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v2.1.0 (2025-02-01)
+
+### Features
+
+- Adjusted the image size to make it visible
+  ([`70253df`](https://github.com/UBC-MDS/fast_eda/commit/70253dfd6c49a4fe9aed73a295722c8880703e66))
+
+
 ## v2.0.0 (2025-01-29)
 
 ### Features
