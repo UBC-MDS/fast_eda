@@ -1,6 +1,5 @@
 import pytest 
 import pandas as pd
-
 from fast_eda.fast_eda import count_nulls
 
 def test_count_standard():
