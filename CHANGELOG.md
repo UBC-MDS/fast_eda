@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v3.0.0 (2025-02-01)
+
+### Testing
+
+- Updated test files
+  ([`fd31be7`](https://github.com/UBC-MDS/fast_eda/commit/fd31be7de56bdc927d41062c8e835b5b7e30713e))
+
+
 ## v2.1.0 (2025-02-01)
 
 ### Features
